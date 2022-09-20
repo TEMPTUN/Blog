@@ -3,6 +3,8 @@ import { useState,useEffect } from 'react';
 import { app } from '../firebaseConfig'
 import { getAuth,createUserWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from 'firebase/auth'
 import { useRouter } from 'next/router';
+import {db} from "../firebaseConfig"
+import { collection, addDoc } from "firebase/firestore"; 
 
 const Register = () => {
     const [email, setemail] = useState('');
@@ -16,6 +18,7 @@ const Register = () => {
             sessionStorage.setItem('Token',response.user.accessToken)
             router.push('/home')
         })
+        postdata()
     }
     const signUpwithGoogle=()=>{
         signInWithPopup(auth,googleProvider)
@@ -24,9 +27,21 @@ const Register = () => {
             router.push('/home')
         })
     }
+    const postdata=()=>{
+        addDoc(collection(db,"write"),{
+            emails:email,
+            passwords:password,
+        }).then(() => {
+            alert('Message submitted 👍' );
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+    }
     useEffect(() => {
       let token=sessionStorage.getItem('Token')
       if(!token){
+        alert("You already are logged in.")
         router.push('/register')
       }
     }, [])

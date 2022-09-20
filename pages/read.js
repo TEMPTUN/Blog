@@ -20,7 +20,7 @@ const Read = () => {
     setdetails(data);
   }
   const clicked=()=>{
-    setclick((prev)=!prev)
+    setclick((prev)=> !prev)
     addDoc(collection(db,"write"),{
       Like:click,
     })
