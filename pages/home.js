@@ -65,9 +65,6 @@ const Home = () => {
         </div>
       </div>
       </nav>
-      <Head>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-         </Head>
       <div className='mt-0 ml-0 mr-0 flex m-2 hover:divide-solid bg-gradient-to-r from-sky-500 to-fuchsia-700'>
         <div className='flex flex-1 flex-col'> 
           <h1 className='mt-10 text-[90px] font-semibold font-sans ml-3'>Simple ToDo WebApp
@@ -78,9 +75,6 @@ const Home = () => {
               >Add your ToDo Task here</button>
           </div>
           </h1>
-        </div>
-        <div className='mr-3 flex flex-col mt-16'>
-          <Image href="file:///C:/Users/tempt/OneDrive/Desktop/viblog/vblogs/images/blog-ge70790840_1920.jpg" />
         </div>
       </div>
       <div className='mb-10'>

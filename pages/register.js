@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import {db} from "../firebaseConfig"
 import { collection, addDoc } from "firebase/firestore"; 
 
-const Register = () => {
+const Register = (props) => {
     const [email, setemail] = useState('');
     const [password,setpassword]=useState('');
     const auth=getAuth();
