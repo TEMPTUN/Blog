@@ -80,7 +80,7 @@ const Home = () => {
       <div className='mb-10'>
         <h3 className='text-3xl text-gray-800 h-10 ml-3'>Your Tasks...</h3>
             <hr/>
-        <div className='mr-2 text-black mb-2'>
+        <div className='mr-2 text-black mb-2' key={Math.floor(Math.random()*1000000)}>
           { 
       details.map((val)=>
       (
