@@ -52,7 +52,7 @@ const Home = () => {
     })
   }
   return (
-    <div>
+    <div key={Math.floor(Math.random()*1000000)}>
       <nav class="relative w-full flex flex-wrap items-center justify-between py-4 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg">
         <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
         <div className="container-fluid flex justify-between">
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </div>
       </nav>
-      <div className='mt-0 ml-0 mr-0 flex m-2 hover:divide-solid bg-gradient-to-r from-sky-500 to-fuchsia-700'>
+      <div className='mt-0 ml-0 mr-0 flex m-2 hover:divide-solid bg-gradient-to-r from-sky-500 to-fuchsia-700' key={Math.floor(Math.random()*1000000)}>
         <div className='flex flex-1 flex-col'> 
           <h1 className='mt-10 text-[90px] font-semibold font-sans ml-3'>Simple ToDo WebApp
           <div className='flex mb-4 mt-4 pt-14'>
@@ -80,13 +80,13 @@ const Home = () => {
       <div className='mb-10' key={Math.floor(Math.random()*1000000)}>
         <h3 className='text-3xl text-gray-800 h-10 ml-3'>Your Tasks...</h3>
             <hr/>
-        <div className='mr-2 text-black mb-2' >
+        <div className='mr-2 text-black mb-2' key={Math.floor(Math.random()*1000000)} >
           { 
       details.map((val)=>
       (
-        <div className='flex flex-col'>
+        <div className='flex flex-col' key={Math.floor(Math.random()*1000000)}>
           <h3 className='text-xl mt-3 ml-3 text-purple-900 font-serif'>🦓{val.categorys}</h3>
-          <div className='flex'>
+          <div className='flex' key={Math.floor(Math.random()*1000000)}>
             <h3 className='text-xl mt-3 ml-3 text-purple-800 font-sans'>🐾[ {val.contents} ]</h3>
             <button 
               onClick={()=>Id(val.id)}
