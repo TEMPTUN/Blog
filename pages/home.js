@@ -77,10 +77,10 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <div className='mb-10'>
+      <div className='mb-10' key={Math.floor(Math.random()*1000000)}>
         <h3 className='text-3xl text-gray-800 h-10 ml-3'>Your Tasks...</h3>
             <hr/>
-        <div className='mr-2 text-black mb-2' key={Math.floor(Math.random()*1000000)}>
+        <div className='mr-2 text-black mb-2' >
           { 
       details.map((val)=>
       (
